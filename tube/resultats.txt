@@ -1,0 +1,43 @@
+===============test de pipe2============= 
+./pipe2 "ls -1" to  "wc -l" 
+17
+ ls -1 | wc -l
+17
+./pipe2 ls to wc
+     17      17     151
+ ls  | wc 
+     17      17     151
+./pipe2 ls to grep pipe2.c
+pipe2.c
+ ls  | grep pipe2.c
+pipe2.c
+================test de pipe3============= 
+./pipe3 "ls -l" "grep p" "wc -l"
+9
+ ls -1 | grep p | wc -l
+9
+./pipe3 "ls -l" "grep a" "wc -l"
+18
+ ls -1 | grep a | wc -l
+5
+=================test de pipen============= 
+./pipen "ls -1" to  "wc -l" 
+17
+ ls -1 | wc -l
+17
+./pipen ls to wc
+     17      17     151
+ ls  | wc 
+     17      17     151
+./pipen ls to grep pipen.c
+pipen.c
+ ls  | grep pipe2.c
+pipen.c
+./pipen "ls -l" "grep p" "wc -l"
+9
+ ls -1 | grep p | wc -l
+9
+./pipen "ls -l" "grep a" "wc -l"
+5
+ ls -1 | grep a | wc -l
+5
